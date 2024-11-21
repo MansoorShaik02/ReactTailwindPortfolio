@@ -1,0 +1,20 @@
+/* Tailwind CSS classes (in the above JSX) for transition and transform */
+.transition-opacity {
+  transition-property: opacity;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.transform {
+  transform: translateY(0);
+}
+
+.opacity-100 {
+  opacity: 1;
+}

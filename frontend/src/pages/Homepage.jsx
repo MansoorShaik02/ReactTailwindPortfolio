@@ -9,6 +9,11 @@ import HelpCard from "../components/HelpCard";
 import Repodetails from "./Repodetails";
 import Timeline from "../components/Timeline";
 import FloatingLinks from "../components/FloatingLinks";
+import Navbar from "../components/Navbar";
+import { RiGitRepositoryCommitsLine } from "react-icons/ri";
+import ResumeButton from "../components/ResumeButton";
+import Contact from "../components/Contact";
+
 const Homepage = () => {
   const [profile, setProfile] = useState(null);
   const [repos, setRepos] = useState(null);
@@ -64,6 +69,7 @@ const Homepage = () => {
 
   return (
     <>
+      <Navbar></Navbar>
       <div className="bg-gray flex min-h-screen text-left">
         <FloatingLinks />
         <div className="bg-gray w-3/5 flex flex-col mt-80px inline-block">
@@ -120,6 +126,8 @@ const Homepage = () => {
                 CONTACT ME
               </a>
             </button>
+
+            <ResumeButton></ResumeButton>
           </div>
         </div>
         <div className="bg-gray w-2/5 flex flex-col items-center mr-1">
@@ -137,7 +145,7 @@ const Homepage = () => {
           {<Timeline></Timeline>}
         </div>
       </div>
-      <div className="g-white flex min-h-screen text-left bg-gray">
+      <div className="g-white flex min-h-screen text-left bg-gray" id="aboutme">
         <div className="w-2/4 flex flex-col  inline-block justify-center">
           <p className="text-5xl text-white ml-5 mt-10">About Me</p>
           <p className="text-xl text-white ml-4 mt-10 font-family:Funnel sans,serif">
@@ -151,8 +159,8 @@ const Homepage = () => {
           </p>
           <div>
             <div className="text-white mx-10 align-bottom">
-              <FaCode className="mx-5 size-10" />
-              <p className="mt-6"> Repos :{profile.public_repos} </p>
+              <RiGitRepositoryCommitsLine size={90} className="mt-6" />
+              <p className="mt-6 ml-4"> Repos : {profile.public_repos} </p>
             </div>
           </div>
         </div>
@@ -208,7 +216,10 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="g-white flex min-h-screen text-left flex-col">
+      <div
+        className="g-white flex min-h-screen text-left flex-col"
+        id="featuredprojects"
+      >
         <p className="text-nonPhotobLUE text-5xl mt-40 ml-10">
           Featured Projects
         </p>
@@ -256,9 +267,15 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="g-white flex min-h-screen text-left bg-red flex flex-col justify-center items-center">
+      <div className="flex min-h-screen text-left bg-red flex flex-col justify-center items-center">
         <div></div>
         <Repodetails></Repodetails>
+      </div>
+      <div
+        className="flex  text-left bg-red flex-col justify-center items-center"
+        id="contactme"
+      >
+        <Contact></Contact>
       </div>
     </>
   );

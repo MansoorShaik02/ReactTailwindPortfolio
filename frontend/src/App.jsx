@@ -10,7 +10,6 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar></Navbar>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/repodetails" element={<Repodetails />} />
