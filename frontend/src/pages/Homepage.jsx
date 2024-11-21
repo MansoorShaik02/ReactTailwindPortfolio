@@ -118,10 +118,8 @@ const Homepage = () => {
             <button className="btn no-animation mx-2 w-1/5 flex items-center text-white ml-1 hover:bg-blue-300 hover:text-black">
               <RiAccountPinBoxLine className="hover:bg-white" />
               <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block hover:underline decoration-2 decoration-black "
+                href="#contactme"
+                className="inline-block hover:underline decoration-2 decoration-black"
               >
                 CONTACT ME
               </a>
