@@ -222,7 +222,7 @@ const Homepage = () => {
         <p className="text-nonPhotobLUE text-5xl mt-40 ml-10">
           Featured Projects
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-10">
+        <div className="grid grid-cols-1 p-0 md:grid-cols-4 gap-4">
           <ProjectCard
             name="MERN-Anime_Tracker"
             link="https://mern-anime-tracker-front.vercel.app/"
