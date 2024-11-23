@@ -70,38 +70,36 @@ const Homepage = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="bg-gray flex min-h-screen text-left">
+      <div className="bg-gray flex flex-col md:flex-row min-h-screen text-left">
         <FloatingLinks />
-        <div className="bg-gray w-3/5 flex flex-col mt-80px inline-block">
-          <p
-            className="mt-20 ml-7 text-6xl inline-block mb-6
-                         text-white pt-6px pb-4px
-                         "
-          >
+        <div className="bg-gray md:w-3/5 w-full flex flex-col mt-20 md:mt-80px">
+          <p className="mt-10 ml-5 md:ml-7 text-4xl md:text-6xl text-white ">
             Hi, I am
           </p>
           {/* add social links github */}
-          <p className="text-8xl text-white ml-5 mt-1">SHAIK MANSOOR </p>
-          <p className="text-2  xl text-white  ml-4 mt-10">
+          <p className="text-6xl md:text-8xl text-white ml-5 mt-1">
+            SHAIK MANSOOR
+          </p>
+          <p className="text-lg md:text-2xl text-white ml-5 mt-5 md:mt-10">
             I am a Full Stack Developer who focuses on building scalable web
             applications
           </p>
-          <div className="mt-10 ml-10">
-            <button className="btn no-animation mx-2 bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500">
+          <div className="mt-10 ml-5 md:ml-10 flex flex-wrap">
+            <button className="btn mx-2 bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500 mb-2">
               React
             </button>
-            <button className="btn no-animation mx-2  bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500">
+            <button className="btn mx-2 bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500 mb-2">
               Javascript
             </button>
-            <button className="btn no-animation mx-2  bg-white bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500">
+            <button className="btn mx-2 bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500 mb-2">
               HTML
             </button>
-            <button className="btn no-animation mx-2  bg-white bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500">
+            <button className="btn mx-2 bg-yellow-300 text-black border-0 hover:text-white hover:bg-red-500 mb-2">
               Tailwind CSS
             </button>
           </div>
-          <div className="mt-10 flex">
-            <button className="btn no-animation mx-2 w-1/5 flex items-center text-white ml-11 hover:bg-blue-300 hover:text-black">
+          <div className="mt-10 ml-5 md:ml-10 flex flex-wrap">
+            <button className="btn mx-2 w-full md:w-1/5 flex items-center text-white mb-2 hover:bg-blue-300 hover:text-black">
               <FaGithub className="mr-2" />
               <a
                 href="https://github.com/MansoorShaik02"
@@ -115,7 +113,7 @@ const Homepage = () => {
 
             {/* button 2 */}
 
-            <button className="btn no-animation mx-2 w-1/5 flex items-center text-white ml-1 hover:bg-blue-300 hover:text-black">
+            <button className="btn no-animation mx-2 md:w-2/5 flex items-center text-white ml-1 hover:bg-blue-300 hover:text-black ">
               <RiAccountPinBoxLine className="hover:bg-white" />
               <a
                 href="#contactme"
@@ -128,7 +126,7 @@ const Homepage = () => {
             <ResumeButton></ResumeButton>
           </div>
         </div>
-        <div className="bg-gray w-2/5 flex flex-col items-center mr-1">
+        <div className="bg-gray md:w-2/5 w-full flex flex-col items-center mt-20 md:mt-0">
           <div
             className="mt-20 ml-3 text-6xl inline-block mb-10
                text-black pt-1.5 pb-1 w-full"
@@ -143,10 +141,13 @@ const Homepage = () => {
           {<Timeline></Timeline>}
         </div>
       </div>
-      <div className="g-white flex min-h-screen text-left bg-gray" id="aboutme">
-        <div className="w-2/4 flex flex-col  inline-block justify-center">
-          <p className="text-5xl text-white ml-5 mt-10">About Me</p>
-          <p className="text-xl text-white ml-4 mt-10 font-family:Funnel sans,serif">
+      <div
+        className="bg-gray flex flex-col md:flex-row min-h-screen text-left"
+        id="aboutme"
+      >
+        <div className="md:w-2/4 w-full flex flex-col justify-center">
+          <p className="text-3xl md:text-5xl text-white ml-5 mt-10">About Me</p>
+          <p className="text-lg md:text-xl text-white ml-5 mt-5 md:mt-10">
             MERN Stack Developer. <br />
             My experience includes creating responsive web applications with
             robust user authentication, as well as implementing computer vision
@@ -156,30 +157,31 @@ const Homepage = () => {
             ability.
           </p>
           <div>
-            <div className="text-white mx-10 align-bottom">
+            <div className="text-white mx-5 flex items-center mt-10">
               <RiGitRepositoryCommitsLine size={90} className="mt-6" />
               <p className="mt-6 ml-4"> Repos : {profile.public_repos} </p>
             </div>
           </div>
         </div>
 
-        <div className=" w-2/4 flex flex-col  inline-block justify-center center items-center">
+        <div className="md:w-2/4 w-full flex flex-col justify-center items-center mt-10 md:mt-0">
           <div>
             <div>
-              <p className="text-4xl text-white ml-5 mt-20">
+              <p className="text-3xl md:text-4xl text-white">
                 Programming Languages
               </p>
-              <div className="mt-10 ml-8">
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+
+              <div className="mt-10 ml-5 flex flex-wrap">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   Javascript
                 </button>
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   HTML
                 </button>
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   CSS
                 </button>
-                <button className="btn no-animation mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   Python
                 </button>
               </div>
@@ -187,41 +189,40 @@ const Homepage = () => {
           </div>
           <div>
             <div>
-              <p className="text-4xl text-white text-center mt-20">Skills</p>
-              <div className="mt-10 ml-8">
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+              <p className="text-3xl md:text-4xl text-white mt-10">Skills</p>
+              <div className="mt-10 ml-5 flex flex-wrap">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   React.js
                 </button>
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   Node.js
                 </button>
-                <button className="btn no-animation mx-2  bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   GitHub
                 </button>
-                <button className="btn no-animation mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   Tailwind CSS
                 </button>
-                <button className="btn no-animation mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500">
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
                   Express.js
                 </button>
-                <div className="mt-10">
-                  <button className="btn no-animation mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500">
-                    MongoDB
-                  </button>
-                </div>
+                <button className="btn mx-2 bg-white text-black border-0 hover:text-white hover:bg-red-500 mb-2">
+                  MongoDB
+                </button>
+                <div className="mt-10"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        className="g-white flex min-h-screen text-left flex-col"
+        className="bg-gray flex flex-col min-h-screen text-left"
         id="featuredprojects"
       >
         <p className="text-nonPhotobLUE text-5xl mt-40 ml-10">
           Featured Projects
         </p>
-        <div className="flex">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-10">
           <ProjectCard
             name="MERN-Anime_Tracker"
             link="https://mern-anime-tracker-front.vercel.app/"

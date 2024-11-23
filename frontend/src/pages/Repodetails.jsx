@@ -57,10 +57,10 @@ const Repodetails = () => {
 
   return (
     <div className="bg-gray flex w-full text-left flex-col min-h-screen">
-      <div className="text-5xl mt-40 ml-5 mb-10 text-white">
+      <div className="md:text-5xl md:mt-40 md:ml-5 md:b-10 md:text-white text-3xl mb-10 text-white">
         Check my latest GitHub Repos
       </div>
-      <div className="ml-10 mr-10 grid grid-cols-3 gap-4 ">
+      <div className="md:ml-10 md:mr-10 md:grid md:grid-cols-3 md:gap-4 grid grid-cols-1">
         {repos.map((repo) => (
           <HelpCard
             key={repo.id}

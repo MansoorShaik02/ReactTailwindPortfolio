@@ -1,8 +1,9 @@
 import React from "react";
 import { FaProjectDiagram } from "react-icons/fa";
+
 const HelpCard = ({ title, description, link, linkText }) => {
   return (
-    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 max-w-sm mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl mb-3 md:mb-0">
       <svg
         className="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
         aria-hidden="true"
