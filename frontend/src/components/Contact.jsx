@@ -15,12 +15,6 @@ const Contact = () => {
           >
             <FaLinkedin />
           </a>
-          <a
-            href="mailto:mansoorshaik7b@gmail.com"
-            className="text-4xl hover:text-red-500"
-          >
-            <FaEnvelope />
-          </a>
         </div>
       </div>
     </div>

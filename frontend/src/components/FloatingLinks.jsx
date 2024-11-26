@@ -28,12 +28,6 @@ const FloatingLinks = () => {
       </a>
 
       {/* Email */}
-      <a
-        href="mailto:mansoorshaik7b@gmail.com"
-        className="text-white hover:text-red-500 transition-transform transform hover:scale-110"
-      >
-        <FaEnvelope size={30} />
-      </a>
     </div>
   );
 };
