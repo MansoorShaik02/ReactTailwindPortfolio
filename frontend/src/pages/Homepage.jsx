@@ -13,7 +13,7 @@ import Navbar from "../components/Navbar";
 import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import ResumeButton from "../components/ResumeButton";
 import Contact from "../components/Contact";
-
+import { ContactForm } from "../components/ContactForm";
 const Homepage = () => {
   const [profile, setProfile] = useState(null);
   const [repos, setRepos] = useState(null);
@@ -274,7 +274,7 @@ const Homepage = () => {
         className="flex  text-left bg-red flex-col justify-center items-center"
         id="contactme"
       >
-        <Contact></Contact>
+        <ContactForm></ContactForm>
       </div>
     </>
   );
