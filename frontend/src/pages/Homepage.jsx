@@ -12,21 +12,13 @@ import FloatingLinks from "../components/FloatingLinks";
 import Navbar from "../components/Navbar";
 import { RiGitRepositoryCommitsLine } from "react-icons/ri";
 import ResumeButton from "../components/ResumeButton";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
 import { ContactForm } from "../components/ContactForm";
 const Homepage = () => {
   const [profile, setProfile] = useState(null);
   const [repos, setRepos] = useState(null);
   const token = import.meta.env.VITE_GitToken;
 
-  const ScrollDownArrow = () => {
-    const handleScroll = () => {
-      const nextSection = document.getElementById("next-section");
-      if (nextSection) {
-        nextSection.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-  };
   useEffect(() => {
     const fetchRepos = async () => {
       try {
@@ -233,6 +225,15 @@ const Homepage = () => {
             description={
               "An Anime site to keep track of your Watchlist and to check Anime Info"
             }
+          ></ProjectCard>
+          <ProjectCard
+            name="Weather_Info"
+            link="https://weather-react-tailwind-lake.vercel.app"
+            tech1="React.js"
+            tech2="Tailwind"
+            tech3="OpenWeatherMap API"
+            imagelink="..\images\weather.png"
+            description={"Site to check Weather related information"}
           ></ProjectCard>
           <ProjectCard
             name="React Movie Website"
